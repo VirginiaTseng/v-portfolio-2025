@@ -3,10 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom HTML Page</title>
+    <title>Huijuan Zheng - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e2f, #252540);
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .project, .skill-block {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project:hover, .skill-block:hover {
+            transform: scale(1.05);
+        }
+        .details {
+            display: none;
+        }
+        .details-btn {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Custom Page</h1>
-    <p>This is a pure HTML page inside a React + Vite project.</p>
+    <header>
+        <h1>Huijuan Zheng (Virginia)</h1>
+        <h2>Software Developer | Power System Automation | SCADA & IoT | Industrial Control Systems</h2>
+        <p>Email: <a href="mailto:huijuan.zheng@gmail.com">huijuan.zheng@gmail.com</a> | Phone: +1 (306) 250-2792 | Saskatoon, SK, Canada</p>
+    </header>
+    
+    <section>
+        <h2><i class="fas fa-user"></i> Professional Summary</h2>
+        <p>Experienced Software Developer with expertise in high-performance, real-time, and latency-sensitive applications, numerical analysis, predictive modeling, and industrial automation. Strong background in big data analytics, AI-driven solutions, and cross-functional collaboration.</p>
+    </section>
+    
+    <section>
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p><strong>Saskatchewan Polytechnic</strong> - Post-Graduate in Project Management (GPA: 93.4/100) - Expected Graduation: June 2024</p>
+        <p><strong>Wuhan University</strong> - Master & Bachelor of Science in Hydro-Power Engineering (Graduated Top 5%)</p>
+    </section>
+    
+    <section>
+        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <p><strong>NARI Group Corporation</strong> (Senior Software Developer | Industrial Systems) - Apr 2006 - Jun 2023</p>
+        <ul>
+            <li>Developed AI-based predictive analytics for industrial automation.</li>
+            <li>Optimized SCADA systems, ensuring real-time power grid efficiency.</li>
+            <li>Led real-time monitoring development for hydropower efficiency tracking.</li>
+            <li>Engineered FPGA-based fault diagnosis systems, reducing downtime by 20%.</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
+        <div class="project">
+            <h3>SJ90 FPGA-Based Monitoring</h3>
+            <button class="details-btn" onclick="toggleDetails('project1')">View Details</button>
+            <p class="details" id="project1">Developed real-time AI-driven diagnostics for hydropower plants, integrating FPGA-based data processing.</p>
+        </div>
+        <div class="project">
+            <h3>AGC & AVC System</h3>
+            <button class="details-btn" onclick="toggleDetails('project2')">View Details</button>
+            <p class="details" id="project2">Designed AI-enhanced automation systems for power grid stabilization and voltage regulation.</p>
+        </div>
+        <div class="project">
+            <h3>UF-911 Ultrasonic Monitoring</h3>
+            <button class="details-btn" onclick="toggleDetails('project3')">View Details</button>
+            <p class="details" id="project3">Developed IoT-integrated ultrasonic flow monitoring, significantly improving measurement accuracy.</p>
+        </div>
+    </section>
+    
+    <section>
+        <h2><i class="fas fa-cogs"></i> Skills</h2>
+        <div class="skill-block">Programming: C++, Python, Java, C#, Linux C, R, QT</div>
+        <div class="skill-block">Web Development: React, Vue.js, HTML/HTML5, CSS, JavaScript, jQuery, ExtJS</div>
+        <div class="skill-block">Databases: MySQL, Oracle, SQL Server, Neo4j, Open TSDB, Influx DB</div>
+        <div class="skill-block">Software & Tools: Docker, Unity, MATLAB, VMware, Sphere, Photoshop</div>
+        <div class="skill-block">Computing Environments: Windows, Linux, CentOS, Ubuntu, Monta Vista</div>
+        <div class="skill-block">Industrial Automation: SCADA, PLC, RTU, Energy Management Systems (EMS)</div>
+        <div class="skill-block">Industrial Protocols: IEC 61850, IEC 104/101, Modbus TCP/RTU, MQTT</div>
+        <div class="skill-block">Frameworks & Libraries: Spring Boot/Cloud, Spring MVC, Struts 1/2, Hibernate, MyBatis</div>
+        <div class="skill-block">Big Data & AI: Time-Series Analysis, HDFS, MapReduce, HBase, Hive, Kafka, Mahout, Spark, Spark Mlib, Storm, TensorFlow, PyTorch</div>
+        <div class="skill-block">CI/CD & Version Control: GIT, SVN, CVS, Jenkins</div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Huijuan Zheng - All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
