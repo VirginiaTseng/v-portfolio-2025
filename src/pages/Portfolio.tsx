@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
-import { AmbientLight, PointLight } from "three";
+// import { AmbientLight, PointLight } from "three";
 
 export default function Portfolio() {
   return (
